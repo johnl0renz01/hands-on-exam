@@ -72,6 +72,20 @@ export default function Browse() {
             ratings[index] += parseInt(reviews[current].UserRating);
         }
       }
+    } else {
+      for (let i = 0; i < ratings.length; i++) {
+        if (ratings[i] > 0) {
+          ratings[i] = ratings[i] / downloads[i];
+          ratings[i] = Math.round(ratings[i] * 10) / 10;
+        } else {
+          ratings[i] = "N/A";
+        }
+      }
+
+      window.localStorage.setItem("TOTAL_RATING", JSON.stringify(ratings));
+      window.localStorage.setItem("TOTAL_DOWNLOADS", JSON.stringify(downloads));
+      setTotalRating(ratings);
+      setTotalDownloads(downloads);
     }
   },[]);
 

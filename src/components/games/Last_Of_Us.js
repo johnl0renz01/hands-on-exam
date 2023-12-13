@@ -36,7 +36,7 @@ export default function Last_Of_Us() {
         setReviewList(reviews);
 
         for (let i = 0; i < reviews.length; i++) {
-            if (reviews[i].GameID == "Last_Of_Us") {
+            if (reviews[i].GameID == "Last") {
                 downloads ++;
                 if (reviews[i].UserRating !== undefined) {
                     ratings += parseInt(reviews[i].UserRating);
@@ -54,6 +54,13 @@ export default function Last_Of_Us() {
             setTotalRating(ratings);
           }
           
+          setTotalDownloads(downloads);
+      } else {
+        if (ratings == 0) {
+            setTotalRating("N/A");
+          } else {
+            setTotalRating(ratings);
+          }
           setTotalDownloads(downloads);
       }
   },[])
@@ -144,7 +151,7 @@ export default function Last_Of_Us() {
                                           </div>
                                           <div class="col-lg-12">
                                               <div class="main-border-button">
-                                                  <a href="javascript:;" onClick={() => {addCart("Last_Of_Us")}}>Add to Cart</a>
+                                                  <a href="javascript:;" onClick={() => {addCart("Last")}}>Add to Cart</a>
                                               </div>
                                           </div>
                                           <div class="col-lg-12" style={{marginTop: -20}}>
@@ -157,7 +164,7 @@ export default function Last_Of_Us() {
                                                 <div class="review-container">
                                                         {reviewList.map((currentReview, index) => (
                                                             <>
-                                                                {currentReview.GameID == "Last_Of_Us" ? 
+                                                                {currentReview.GameID == "Last" ? 
                                                                     <div className="user-review">
                                                                         <div className="user-info">
                                                                                 <h5 style={{color: "#c200a1"}}>{currentReview.UserName}</h5>

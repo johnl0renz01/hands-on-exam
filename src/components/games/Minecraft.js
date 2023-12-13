@@ -45,6 +45,13 @@ export default function Minecraft() {
           }
           
           setTotalDownloads(downloads);
+      } else {
+        if (ratings == 0) {
+            setTotalRating("N/A");
+          } else {
+            setTotalRating(ratings);
+          }
+          setTotalDownloads(downloads);
       }
   },[])
 

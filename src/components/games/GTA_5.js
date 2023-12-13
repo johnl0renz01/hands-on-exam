@@ -47,6 +47,13 @@ export default function GTA_5() {
           }
           
           setTotalDownloads(downloads);
+      } else {
+        if (ratings == 0) {
+            setTotalRating("N/A");
+          } else {
+            setTotalRating(ratings);
+          }
+          setTotalDownloads(downloads);
       }
   },[])
 

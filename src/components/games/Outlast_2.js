@@ -55,6 +55,13 @@ export default function Outlast_2() {
           }
           
           setTotalDownloads(downloads);
+      } else {
+        if (ratings == 0) {
+            setTotalRating("N/A");
+          } else {
+            setTotalRating(ratings);
+          }
+          setTotalDownloads(downloads);
       }
   },[])
 

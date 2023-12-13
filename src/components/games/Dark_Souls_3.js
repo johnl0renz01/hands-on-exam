@@ -56,6 +56,13 @@ export default function Dark_Souls_3() {
         }
         
         setTotalDownloads(downloads);
+      } else {
+        if (ratings == 0) {
+            setTotalRating("N/A");
+          } else {
+            setTotalRating(ratings);
+          }
+          setTotalDownloads(downloads);
       }
 
   },[])

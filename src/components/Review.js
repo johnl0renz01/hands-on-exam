@@ -266,7 +266,7 @@ export default function Review() {
                                     : currentProduct == "Resident" ? <>{reviewCard("Resident", "https://i.redd.it/9pkjldbqb3sa1.jpg", "Resident Evil 7", index)}</> 
                                     : currentProduct == "Last" ? <>{reviewCard("Last", "https://assets-prd.ignimgs.com/2022/06/09/the-last-of-us-part-1-button-1654791855870.jpg?width=300&crop=1%3A1%2Csmart&auto=webp", "The Last of Us", index)}</> 
                                     : currentProduct == "Forest" ? <>{reviewCard("Forest", "https://static-sg.winudf.com/video/image/5e7b5f3b-640f-405e-bc68-ff0f6747d925.jpg", "The Forest", index)}</> 
-                                    : currentProduct == "Dark" ? <>{reviewCard("Dark", "https://ass ets2.ignimgs.com/2015/06/15/dark-souls-3-buttonjpg-a5759a.jpg", "Dark Souls 3", index)}</> 
+                                    : currentProduct == "Dark" ? <>{reviewCard("Dark", "https://assets2.ignimgs.com/2015/06/15/dark-souls-3-buttonjpg-a5759a.jpg", "Dark Souls 3", index)}</> 
                                     : <></>
                                     }
                                   </div> 

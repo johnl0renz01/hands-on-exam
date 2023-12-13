@@ -55,6 +55,13 @@ export default function Forest() {
         }
         
         setTotalDownloads(downloads);
+      } else {
+        if (ratings == 0) {
+            setTotalRating("N/A");
+          } else {
+            setTotalRating(ratings);
+          }
+          setTotalDownloads(downloads);
       }
   },[])
 
