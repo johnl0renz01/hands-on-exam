@@ -1,0 +1,287 @@
+.column-labels {
+  display: flex;
+  color: white;
+  border-bottom: 1px solid white;
+  margin-bottom: 1rem;
+}
+
+.product-image {
+  float: left;
+  width: 16.5%;
+  color: white;
+}
+.product-details {
+  float: left;
+  width: 30%;
+  color: white;
+}
+.product-price {
+  float: left;
+  width: 15%;
+  color: white;
+}
+.product-quantity {
+  float: left;
+  width: 16%;
+  color: white;
+}
+.product-removal {
+  float: left;
+  width: 9%;
+  color: white;
+}
+.product-line-price {
+  float: right;
+  width: 12%;
+  text-align: right;
+  color: white;
+}
+
+/* This is used as the traditional .clearfix class */
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  zoom: 1;
+}
+
+.product-container {
+  display: grid;
+}
+
+/* Body/Header stuff */
+.checkout-container {
+  padding: 0px 30px 30px 20px;
+  font-weight: 100;
+}
+
+.checkout-container h1 {
+  font-weight: 100;
+}
+
+.checkout-container label {
+  color: red;
+}
+
+.shopping-cart {
+  margin-top: -45px;
+}
+
+.checkout-container label {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+/* Product entries */
+.product {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid white;
+}
+
+.product-image {
+  text-align: center;
+}
+
+.checkout-container img {
+  width: 150px;
+}
+
+.product-title {
+  margin-right: 20px;
+  font-weight: bold;
+}
+.product-description {
+  font-family: sans-serif;
+  margin: 5px 30px 5px 0;
+  line-height: 1.4em;
+}
+
+.product-quantity input {
+  width: 40px;
+}
+
+.remove-product {
+  border: 0;
+  padding: 4px 8px;
+  background-color: rgb(191, 66, 66);
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+.remove-product:hover {
+  background-color: rgb(140, 35, 35);
+}
+
+/* Totals section */
+
+.totals {
+  color: white;
+  display: grid;
+}
+
+.totals-item {
+  display: flex;
+  float: right;
+  clear: both;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.checkout-container label {
+  color: #c200a1;
+  font-weight: bold;
+  float: left;
+  clear: both;
+  width: 100%;
+  text-align: right;
+}
+
+.checkout-container .product-image {
+  color: #c200a1;
+  font-weight: bold;
+  text-align: center;
+}
+
+.checkout-container .product-details {
+  color: #c200a1;
+  font-weight: bold;
+  text-align: left;
+}
+
+.totals-value {
+  float: right;
+  width: 21%;
+  text-align: right;
+}
+
+.totals-item-total {
+  font-weight: bold;
+}
+
+.checkout-container {
+  padding-bottom: 4rem;
+}
+
+.checkout {
+  float: right;
+  border: 0;
+  margin-top: 20px;
+  padding: 6px 25px;
+  background-color: #f58700;
+  color: #fff;
+  font-size: 25px;
+  border-radius: 3px;
+  font-family: sans-serif;
+  font-weight: bold;
+  display: none;
+}
+
+.checkout:hover {
+  color: #fff;
+  background-color: #cc6900;
+}
+
+/* Make adjustments for tablet */
+@media screen and (max-width: 1200px) {
+  .shopping-cart {
+    margin: 0;
+    padding-top: 20px;
+    border-top: 1px solid greenyellow;
+  }
+
+  .column-labels {
+    display: none;
+  }
+
+  .product-image {
+    float: right;
+    width: auto;
+  }
+
+  .checkout-container img {
+    margin: 0 0 10px 10px;
+  }
+
+  .product-details {
+    float: none;
+    margin-bottom: 10px;
+    width: auto;
+  }
+
+  .product-price {
+    clear: both;
+    width: 70px;
+  }
+
+  .product-quantity {
+    width: 100px;
+  }
+
+  .checkout-container input {
+    margin-left: 20px;
+  }
+
+  .product-quantity:before {
+    content: "x";
+  }
+
+  .product-removal {
+    width: auto;
+  }
+
+  .product-line-price {
+    float: right;
+    width: 70px;
+  }
+}
+
+/* Make more adjustments for phone */
+@media screen and (max-width: 350px) {
+  .product-removal {
+    float: right;
+  }
+
+  .product-line-price {
+    float: right;
+    clear: left;
+    width: auto;
+    margin-top: 10px;
+  }
+
+  .product .product-line-price:before {
+    content: "Item Total: $";
+  }
+
+  .checkout-container label {
+    width: 60%;
+  }
+
+  .totals-value {
+    width: 40%;
+  }
+}
+
+.finish {
+  border: 0;
+  margin-top: 20px;
+  padding: 6px 25px;
+  background-color: #d6d6d6;
+  color: rgb(19, 19, 19);
+  font-size: 20px;
+  border-radius: 3px;
+  font-family: sans-serif;
+  font-weight: bold;
+  transition-duration: 0.2s;
+}
+
+.finish:hover {
+  opacity: 0.6;
+}
